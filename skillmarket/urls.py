@@ -5,10 +5,10 @@ from .views_auth import RegisterUser, LoginUser
 
 urlpatterns = [
     path('auth/register/', RegisterUser.as_view(), name='register'),
-    path('auth/login/', LoginUser.as_view(), name='login'),
-    path('api/profile/', UserProfileView.as_view(), name='user-profile'),
-    path('skills/', SkillClassListCreate.as_view(), name='skills-list-create'),  # GET + POST
-    path('bookings/', BookSkillClass.as_view(), name='book-skill-class'),        # POST
-    path('bookings/my/', MyBookingsView.as_view(), name='my-bookings'),          # GET
-    path('messages/', ChatMessagesView.as_view(), name='chat-messages'),
+    # path('auth/login/', LoginUser.as_view(), name='login'),
+    # path('api/profile/', UserProfileView.as_view(), name='user-profile'),
+    # path('skills/', SkillClassListCreate.as_view(), name='skills-list-create'),  # GET + POST
+    # path('bookings/', BookSkillClass.as_view(), name='book-skill-class'),        # POST
+    # path('bookings/my/', MyBookingsView.as_view(), name='my-bookings'),          # GET
+    # path('messages/', ChatMessagesView.as_view(), name='chat-messages'),
 ]

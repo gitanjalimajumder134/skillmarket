@@ -25,23 +25,24 @@ class RegisterUser(APIView):
         ),
         responses={201: "User registered successfully", 400: "Validation error"}
     )
-    def post(self, request):
-        email = request.data.get('email')
-        password = request.data.get('password')
-        username = request.data.get('username')
+    def get(self, request):
+        data = 'hello'
+        # email = request.data.get('email')
+        # password = request.data.get('password')
+        # username = request.data.get('username')
 
-        if not all([email, password, username]):
-            return Response({'error': 'All fields are required'}, status=status.HTTP_400_BAD_REQUEST)
+        # if not all([email, password, username]):
+        #     return Response({'error': 'All fields are required'}, status=status.HTTP_400_BAD_REQUEST)
 
-        try:
-            firebase_user = firebase_auth.create_user(email=email, password=password)
-        except Exception as e:
-            return Response({'error': f'Firebase Error: {str(e)}'}, status=status.HTTP_400_BAD_REQUEST)
+        # try:
+        #     firebase_user = firebase_auth.create_user(email=email, password=password)
+        # except Exception as e:
+        #     return Response({'error': f'Firebase Error: {str(e)}'}, status=status.HTTP_400_BAD_REQUEST)
 
-        user = User.objects.create_user(username=username, email=email)
-        return Response({'message': 'User registered successfully'}, status=status.HTTP_201_CREATED)
+        # user = User.objects.create_user(username=username, email=email)
+        return Response({'message': 'User registered successfully'},data=data, status=status.HTTP_201_CREATED)
 
-class LoginUser(APIView):
+# class LoginUser(APIView):
     @swagger_auto_schema(
         operation_description="Login user using Firebase email & password, issue JWT tokens",
         request_body=openapi.Schema(
