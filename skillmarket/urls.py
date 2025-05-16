@@ -1,8 +1,7 @@
 from django.urls import path
 
 from .views import BookSkillClass, ChatMessagesView, MyBookingsView, SkillClassListCreate, UserProfileView
-from .views_auth import RegisterUser, LoginUser
-
+from .views_auth import RegisterUser
 urlpatterns = [
     path('auth/register/', RegisterUser.as_view(), name='register'),
     # path('auth/login/', LoginUser.as_view(), name='login'),
