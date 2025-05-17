@@ -4,3 +4,7 @@ firebase-adminsdk/
 firebase-adminsdk.json
 firebase-adminsdk.json
 SkillMarketProject/__pycache__/
+SkillMarketProject/__pycache__
+SkillMarketProject/SkillMarketProject/__pycache__/
+skillmarket/migrations/__pycache__
+skillmarket/__pycache__
