@@ -21,7 +21,7 @@ def health_check(request):
     """
     Health check endpoint to verify the API is running.
     """
-    return Response({"status": "ok"})
+    return Response({"status": "deployed_ok"})
 
 class UserProfileView(APIView):
     permission_classes = [IsAuthenticated]
