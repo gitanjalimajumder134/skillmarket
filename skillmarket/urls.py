@@ -1,9 +1,10 @@
 from django.urls import path
 
-from .views import BookSkillClass, ChatMessagesView, MyBookingsView, SkillClassListCreate, UserProfileView
+from .views import BookSkillClass, ChatMessagesView, MyBookingsView, SkillClassListCreate, UserProfileView, health_check
 from .views_auth import RegisterUser
 urlpatterns = [
-    path('auth/register/', RegisterUser.as_view(), name='register'),
+    path('health/', health_check, name='health-check'),
+    # path('auth/register/', RegisterUser.as_view(), name='register'),
     # path('auth/login/', LoginUser.as_view(), name='login'),
     # path('api/profile/', UserProfileView.as_view(), name='user-profile'),
     # path('skills/', SkillClassListCreate.as_view(), name='skills-list-create'),  # GET + POST

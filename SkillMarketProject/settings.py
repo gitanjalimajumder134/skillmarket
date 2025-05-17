@@ -105,9 +105,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'skillmarket',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'USER': 'admin',
+        'PASSWORD': 'root1234',
+        'HOST': '13.203.180.246',
         'PORT': '3306',
     }
 }
